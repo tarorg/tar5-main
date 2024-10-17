@@ -1,0 +1,13 @@
+{
+  "webDir": "dist",
+  "appId": "com.example.app",
+  "appName": "tar",
+  "android": {
+    "buildOptions": {
+      "keystorePath": "path/to/your/keystore.jks",
+      "keystorePassword": "your-keystore-password",
+      "keystoreAlias": "your-key-alias",
+      "keystoreAliasPassword": "your-alias-password"
+    }
+  }
+}
