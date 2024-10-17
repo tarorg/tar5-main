@@ -1,0 +1,24 @@
+---
+interface Attribute {
+  trait_type: string;
+  value: string;
+}
+
+interface CatData {
+  name: string;
+  description: string;
+  attributes: Attribute[];
+}
+
+const catData: CatData = await fetch('/pin/cat.json').then(res => res.json());
+---
+
+<h1>Pin Page: {catData.name}</h1>
+<p>{catData.description}</p>
+
+<h2>Attributes:</h2>
+<ul>
+  {catData.attributes.map((attr) => (
+    <li><strong>{attr.trait_type}:</strong> {attr.value}</li>
+  ))}
+</ul>
